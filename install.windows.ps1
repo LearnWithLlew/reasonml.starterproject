@@ -7,17 +7,17 @@
 
 iwr -useb https://raw.githubusercontent.com/JayBazuzi/machine-setup/main/windows.ps1 | iex
 
-choco install reasonml-dev
+choco install nodejs
+refreshenv
+npm install -g bs-platform
+cinst intellijidea
 
 # Clone repo
 & "C:\Program Files\Git\cmd\git.exe" clone https://github.com/LearnWithLlew/reasonml.starterproject.git C:\Code\reasonml.starterproject
 cd C:\Code\reasonml.starterproject
 
 # Run starting reasonml stuff
-cabal update
-cabal install --lib HUnit
+npm install
 run_tests.bat
 
-# Done
-cls
 echo "Done!"
