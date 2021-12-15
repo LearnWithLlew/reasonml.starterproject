@@ -1,1 +1,2 @@
-runhaskell code.hs
+npm run build & ^
+npm run test:ci
